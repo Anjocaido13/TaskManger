@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body{
+    margin: 0;
+    background-color: rgb(240, 240, 240);
+}
+button{
+    border: none;
+    background-color: blue;
+    cursor: pointer;
+    padding: 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 50px;
+}
+.logo{
+    position: relative;
+    left: 10px;
+    color: white;
+}
+.sidebar{
+    position: fixed;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 240px;
+    height: 100%;
+    background-color: blue;
+    padding: 10px;
+}
+.sidebar button > span{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 70px;
+    padding:  0 16px 0 16px;
+}
+.sidebar button:hover > span{
+    background: rgb(91, 91, 235);
+}
+.taskBoard{
+    position: absolute;
+    color: black;
+    left: 300px;
+}
+.warming{
+    position: absolute;
+    top: 100px;
+    left: 280px;
+    font-size: 25px;
+}
+
+table{
+    position: absolute;
+    left: 300px;
+    top: 100px;
+    /*height: 300px;*/
+    width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    border-collapse: collapse;
+}
+thead{
+    background-color: blue;
+    color: white;
+}
+.nameDB{
+    position: absolute;
+    left: 40px;
+}
+.roleDB{
+    position: relative;
+    left: 80px;
+
+}
+.taskDB{
+    position: absolute;
+    left: 400px;
+}

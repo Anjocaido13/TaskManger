@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+      </style>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="css/MainScreen.css"/>
+</head>
+<body>
+    <aside class="sidebar">
+        <header class="logo">
+            <h1>Task Manager</h1>
+        </header>
+        <nav>
+            <button class="buttonHome">
+                <span>
+                    <img src="css\homeIcon.png" height="35px" width="35px" alt="">
+                    <span>Home</span>
+                </span>
+            </button>
+            <a href="/Employer">
+            <button  class="buttonEmployer">
+                <span>
+                    <img src="css\personIcon.png" height="35px" width="35px" alt="">
+                    <span>Employer</span>
+                </span>
+            </button>
+            </a>
+                         
+        </nav>
+    </aside>
+    <div>
+        <h1 class="taskBoard">Task Board</h1>
+    </div>
+    <div th:if="${warming}" th:text="${warming}" class="warming">
+        
+    </div>
+    <table >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Task</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="testar" th:each="employer : ${dataList}">
+                <td class="nameDB" th:text="${employer.name}"></td>
+                <td class="roleDB" th:text="${employer.role}"></td>
+                <td class="taskDB" th:text="${employer.task}"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
